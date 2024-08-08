@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Берсерк - Аниме</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.ytimg.com/vi/tbximjk2DTQ/maxresdefault.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+        }
+        .tabs button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .tabs button.active, .tabs button:hover {
+            background-color: rgba(255, 0, 0, 0.7);
+        }
+        .content {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Аниме Берсерк</h1>
+    </header>
+    <div class="tabs">
+        <button class="tab-button active" onclick="showSection('section1')">О аниме</button>
+        <button class="tab-button" onclick="showSection('section2')">Персонажи</button>
+        <button class="tab-button" onclick="showSection('section3')">Сюжет</button>
+        <button class="tab-button" onclick="showSection('section4')">Новости</button>
+    </div>
+    <div class="content">
+        <div id="section1" class="section active">
+            <h2>О аниме</h2>
+            <p>Берсерк — это японская манга, написанная и иллюстрированная Кэнтаро Миурой. Она получила адаптацию в аниме, которое рассказывает о приключениях Гатса, наёмника, сражающегося с демонами и темными силами в средневековом фэнтезийном мире.</p>
+        </div>
+        <div id="section2" class="section">
+            <h2>Персонажи</h2>
+            <p>Гатс, главный герой, известен своей силой и отвагой. Другие важные персонажи включают Каскуса, его верную соратницу, и Гриффита, загадочного лидера группы "Сокол".</p>
+        </div>
+        <div id="section3" class="section">
+            <h2>Сюжет</h2>
+            <p>Сюжет "Берсерка" следует за Гатсом, наёмником с жестоким прошлым, который преследует свою личную месть и сталкивается с различными сверхъестественными силами, в том числе с Демонами. Его путешествие полно испытаний и трагедий.</p>
+        </div>
+        <div id="section4" class="section">
+            <h2>Новости</h2>
+            <p>Будьте в курсе последних новостей и обновлений по аниме "Берсерк". Следите за нашими обновлениями для получения информации о новых выпусках и событиях.</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(id) {
+            
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            
+            document.querySelectorAll('.tab-button').forEach(button => button.classList.remove('active'));
+            
+            document.getElementById(id).classList.add('active');
+            
+            document.querySelector(.tab-button[onclick="showSection('${id}')"]).classList.add('active');
+        }
+    </script>
+</body>
+</html>
